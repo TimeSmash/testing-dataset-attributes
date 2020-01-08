@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testing Dataset Attributes</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+
+  <div>
+<div class = "recipe-card" data-diet="veggie"> 
+  <img src="https://www.thespruceeats.com/thmb/OW7mOiSm94QcVnubjuGbriP79mA=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/Creamy-Rice-Pilaf-with-Peas-58ade5043df78c345be1199d.jpg" alt="Rice Pilaf">
+  <p>Rice Pilaf</p> 
+</div>
+
+<div class = "recipe-card" data-diet="vegan">
+  <img src ="https://www.jocooks.com/wp-content/uploads/2018/02/aglio-et-olio-fettuccine-1.jpg" alt="Aglio y olio">
+  <p>Aglio y olio</p> 
+</div>
+  
+ <div class = "recipe-card" data-diet="omni">
+  <img src ="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_800/https://www.savingdessert.com/wp-content/uploads/2019/01/Chicken-Francese-1.jpg" alt="Chicken French">
+  <p>Chicken French</p> 
+</div>
+<button id="show-veggie">Show Only Vegetarian</button>
+<button id="show-all">Show All Recipes</button>
+</div>
+<div class="lower">
+  <div class="letter" data-key="65">
+    <h2>
+      A
+    </h2>
+  </div>
+  <div class="letter" data-key="83">
+    <h2>
+      S
+    </h2>
+  </div>
+  <div class="letter" data-key="68">
+    <h2>
+      D
+    </h2>
+  </div>
+  <div class="letter" data-key="70">
+    <h2>
+      F
+    </h2>
+  </div>
+  <div class="letter" data-key="71">
+    <h2>
+      G
+    </h2>
+  </div>
+  <div class="letter" data-key="72">
+    <h2>
+      H
+    </h2>
+  </div>
+  <div class="letter" data-key="74">
+    <h2>
+      J
+    </h2>
+  </div>
+  <div class="letter" data-key="75">
+    <h2>
+      K
+    </h2>
+  </div>
+  <div class="letter" data-key="76">
+    <h2>
+      L  
+    </h2>
+  </div>
+</div>
+
+
+</div>
+    <script>
+    let vegButton = document.getElementById("show-veggie")
+    // vegButton.addEventListener('click', () => alert("I was clicked"))
+    vegButton.addEventListener('click', () => {
+      let recipes = document.getElementsByClassName("recipe-card")
+      // alert(recipes.length)
+      for (let card of recipes) {
+        if (card.dataset.diet!=="veggie"){
+          card.style.visibility="hidden"}
+        }
+    }) 
+  </script>
+  
+   <script>
+    let showAllButton = document.getElementById("show-all")
+
+    showAllButton.addEventListener('click', () => {
+      let recipes = document.getElementsByClassName("recipe-card")
+      for (let card of recipes) {
+          card.style.visibility="visible"
+      }
+    }) 
+  </script>
+
+<script>
+   let letters = document.querySelectorAll(".letter")
+   let keys = []
+   
+   letters.forEach(l => keys.push(l.dataset.key))
+   
+  //  console.log(keys)
+   
+   window.addEventListener('keydown', (e) => { 
+     if (!keys.includes("" + e.which)) {return}
+     let letterToChange = document.querySelector(`.letter[data-key="${e.which}"]`)
+     
+     if (letterToChange.firstElementChild.innerText.length === 1){
+      letterToChange.firstElementChild.innerText = `You hit the ${e.key.toUpperCase()} key. Hit it again to change it back to the letter.`
+     } else {
+      letterToChange.firstElementChild.innerText = e.key.toUpperCase()
+     }    
+   })
+</script>
+
+  </body>
+
+</html>
