@@ -17,16 +17,33 @@
 
 button{
   font-size:2em;
+  border:1px solid grey;
   border-radius:15px;
   background:#EEE;
 }
 
+button:hover{
+  cursor:pointer;
+}
 .lower{
   clear:both;
+  background: #CDF;
+  overflow:hidden;
+  padding:1em;
+  width:100%;
+}
+
+.upper{
+  background: #ADD;
+  overflow:hidden;
+  padding:1em;
+  width:100%;
+  margin-bottom:1em;
 }
 
 .lower div{
   color:black;
+  background:white;
   float:left;
   margin-right:1em;
   margin-bottom:1em;
@@ -34,4 +51,14 @@ button{
   width:15em;
   text-align:center;
   border:2px solid black;
+}
+
+.single-letter{
+  font-size:9em;
+  margin-top:0.2em;
+}
+
+.heading{
+  font-size:3em;
+  text-align:center
 }

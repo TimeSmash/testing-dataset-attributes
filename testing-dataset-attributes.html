@@ -10,7 +10,8 @@
 
 <body>
 
-  <div>
+  <div class="upper">
+    <h1 class="heading">Using dataset attributes to alter visibility</h1>
 <div class = "recipe-card" data-diet="veggie"> 
   <img src="https://www.thespruceeats.com/thmb/OW7mOiSm94QcVnubjuGbriP79mA=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/Creamy-Rice-Pilaf-with-Peas-58ade5043df78c345be1199d.jpg" alt="Rice Pilaf">
   <p>Rice Pilaf</p> 
@@ -26,51 +27,54 @@
   <p>Chicken French</p> 
 </div>
 <button id="show-veggie">Show Only Vegetarian</button>
+<br>
+<br>
 <button id="show-all">Show All Recipes</button>
 </div>
 <div class="lower">
+  <h1 class="heading">Using keycodes as dataset attributes</h1>
   <div class="letter" data-key="65">
-    <h2>
+    <h2 class="single-letter">
       A
     </h2>
   </div>
   <div class="letter" data-key="83">
-    <h2>
+    <h2 class="single-letter">
       S
     </h2>
   </div>
   <div class="letter" data-key="68">
-    <h2>
+    <h2 class="single-letter">
       D
     </h2>
   </div>
   <div class="letter" data-key="70">
-    <h2>
+    <h2 class="single-letter">
       F
     </h2>
   </div>
   <div class="letter" data-key="71">
-    <h2>
+    <h2 class="single-letter">
       G
     </h2>
   </div>
   <div class="letter" data-key="72">
-    <h2>
+    <h2 class="single-letter">
       H
     </h2>
   </div>
   <div class="letter" data-key="74">
-    <h2>
+    <h2 class="single-letter">
       J
     </h2>
   </div>
   <div class="letter" data-key="75">
-    <h2>
+    <h2 class="single-letter">
       K
     </h2>
   </div>
   <div class="letter" data-key="76">
-    <h2>
+    <h2 class="single-letter">
       L  
     </h2>
   </div>
@@ -116,8 +120,10 @@
      
      if (letterToChange.firstElementChild.innerText.length === 1){
       letterToChange.firstElementChild.innerText = `You hit the ${e.key.toUpperCase()} key. Hit it again to change it back to the letter.`
+      // letterToChange.firstElementChild.classList.remove("single-letter")
      } else {
       letterToChange.firstElementChild.innerText = e.key.toUpperCase()
+      // letterToChange.firstElementChild.classList.add("single-letter")
      }    
    })
 </script>
