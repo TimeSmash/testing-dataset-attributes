@@ -120,10 +120,10 @@
      
      if (letterToChange.firstElementChild.innerText.length === 1){
       letterToChange.firstElementChild.innerText = `You hit the ${e.key.toUpperCase()} key. Hit it again to change it back to the letter.`
-      // letterToChange.firstElementChild.classList.remove("single-letter")
+      letterToChange.firstElementChild.classList.remove("single-letter")
      } else {
       letterToChange.firstElementChild.innerText = e.key.toUpperCase()
-      // letterToChange.firstElementChild.classList.add("single-letter")
+      letterToChange.firstElementChild.classList .add("single-letter")
      }    
    })
 </script>
