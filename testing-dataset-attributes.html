@@ -12,6 +12,9 @@
 
   <div class="upper">
     <h1 class="heading">Using dataset attributes to alter visibility</h1>
+    <p class='explaination'>Each recipe card has a <code>data-diet</code> attribute. By clicking the "Show Only Vegetarian"
+    button, any recipe card that does not have a <code>data-diet</code> attribute equal to "veggie" will 
+    turn invisible. Hit the "Show All Recipes" to revert this.</p>
 <div class = "recipe-card" data-diet="veggie"> 
   <img src="https://www.thespruceeats.com/thmb/OW7mOiSm94QcVnubjuGbriP79mA=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/Creamy-Rice-Pilaf-with-Peas-58ade5043df78c345be1199d.jpg" alt="Rice Pilaf">
   <p>Rice Pilaf</p> 
@@ -31,8 +34,12 @@
 <br>
 <button id="show-all">Show All Recipes</button>
 </div>
+
 <div class="lower">
   <h1 class="heading">Using keycodes as dataset attributes</h1>
+  <p class='explaination'>Each div has a <code>data-key</code> attribute. These are set to the letter's keycode inside the div.
+    By utilizing event listeners, we check for when the key is pressed, derive its keycode from that, and toggle a message in the div.
+   </p>
   <div class="letter" data-key="65">
     <h2 class="single-letter">
       A

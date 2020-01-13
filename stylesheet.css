@@ -1,4 +1,10 @@
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
 .recipe-card{
+  font-family: 'Arial', sans-serif;
   float:left;
   margin-right:1em;
 }
@@ -30,14 +36,12 @@ button:hover{
   background: #CDF;
   overflow:hidden;
   padding:1em;
-  width:100%;
 }
 
 .upper{
   background: #ADD;
   overflow:hidden;
   padding:1em;
-  width:100%;
   margin-bottom:1em;
 }
 
@@ -61,4 +65,10 @@ button:hover{
 .heading{
   font-size:3em;
   text-align:center
+}
+
+.explaination{
+  text-align:center;
+  margin-left:15em;
+  width:60em;
 }
